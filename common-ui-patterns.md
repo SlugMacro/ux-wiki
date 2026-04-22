@@ -54,6 +54,7 @@ UI patterns là các giải pháp thiết kế đã được validate qua hàng 
 - [[navigation-patterns]]
 - [[micro-interactions]]
 - [[gestalt-principles]]
+- [[ai-ux-patterns]] — AI-specific patterns: suggestion chips, streaming responses, AI cards, confidence indicators
 
 ## Sources
 - [UI Patterns](https://ui-patterns.com/) — Anders Toxboe

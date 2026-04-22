@@ -56,6 +56,7 @@ Always respect this media query — some users have vestibular disorders.
 - [[common-ui-patterns]]
 - [[design-principles]]
 - [[accessibility-basics]]
+- [[ai-ux-patterns]] — Streaming animations, AI loading states, confidence visual cues, agent progress indicators
 
 ## Sources
 - [Microinteractions](https://microinteractions.com/) — Dan Saffer

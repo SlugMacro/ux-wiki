@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "color-theory.md",
+                "file": "ai-ux-patterns.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "color-theory"
+              "title": "ai-ux-patterns"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "color-theory.md",
+                "file": "ai-ux-patterns.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for color-theory"
+              "title": "Backlinks for ai-ux-patterns"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "color-theory.md",
+                "file": "ai-ux-patterns.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from color-theory"
+              "title": "Outgoing links from ai-ux-patterns"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "color-theory.md",
+                "file": "ai-ux-patterns.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of color-theory"
+              "title": "Outline of ai-ux-patterns"
             }
           }
         ]
@@ -185,9 +185,14 @@
   },
   "active": "da3665011cbae356",
   "lastOpenFiles": [
-    "cognitive-biases.md",
+    "README.md",
+    "ai-ux-patterns.md",
     "atomic-design.md",
     "accessibility-basics.md",
+    "typography.md",
+    "spacing-system.md",
+    "color-theory.md",
+    "cognitive-biases.md",
     "design-tokens.md"
   ]
 }

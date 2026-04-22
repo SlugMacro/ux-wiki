@@ -35,9 +35,12 @@
 - [[figma-workflow]] — Efficient Figma usage, auto-layout, variables, plugins
 - [[design-to-dev-handoff]] — Specs, inspect, code generation best practices
 
+## AI & Emerging
+- [[ai-ux-patterns]] — AI UX patterns, trust & transparency, agent design, conversational UI, onboarding
+
 ## Case Studies
 _(empty — sẽ được thêm khi ingest case studies)_
 
 ---
 
-**Stats**: 18 pages | Last updated: 2026-04-22
+**Stats**: 19 pages | Last updated: 2026-04-22

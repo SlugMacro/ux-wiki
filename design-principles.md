@@ -40,6 +40,7 @@ Có 2 loại principles: **universal principles** (áp dụng mọi nơi) và **
 - [[gestalt-principles]]
 - [[common-ui-patterns]]
 - [[accessibility-basics]]
+- [[ai-ux-patterns]] — Nielsen's Heuristics trong context AI: visibility of system status cho streaming, error recovery cho hallucinations
 
 ## Sources
 - [10 Usability Heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) — Nielsen Norman Group
