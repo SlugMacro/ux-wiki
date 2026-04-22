@@ -27,6 +27,7 @@
 - [[usability-testing]] — Testing methods, metrics, analysis
 
 ## Design Systems
+- [[design-systems]] — Tổng quan Design System: thành phần, governance, adoption, tools
 - [[design-tokens]] — Token architecture, naming, theming
 - [[atomic-design]] — Atoms, molecules, organisms, templates, pages
 - [[component-api-design]] — Props, variants, slots, composition patterns
@@ -43,4 +44,4 @@ _(empty — sẽ được thêm khi ingest case studies)_
 
 ---
 
-**Stats**: 19 pages | Last updated: 2026-04-22
+**Stats**: 20 pages | Last updated: 2026-04-22

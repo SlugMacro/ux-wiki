@@ -4,7 +4,7 @@
 
 ## Overview
 
-Spacing system dùng base unit (thường 4px hoặc 8px) và chỉ sử dụng các bội số. Loại bỏ "magic numbers" — không còn 13px, 17px, hay 23px random. Consistent spacing là khác biệt lớn nhất giữa amateur và professional UI.
+Spacing system (hệ thống khoảng cách) dùng base unit (đơn vị gốc) (thường 4px hoặc 8px) và chỉ sử dụng các bội số. Loại bỏ "magic numbers" (số tùy tiện không theo quy tắc) — không còn 13px, 17px, hay 23px random. Consistent spacing là khác biệt lớn nhất giữa amateur và professional UI.
 
 ## Key Points
 
@@ -46,6 +46,16 @@ Spacing system dùng base unit (thường 4px hoặc 8px) và chỉ sử dụng 
 - [[gestalt-principles]]
 - [[design-tokens]]
 - [[typography]]
+
+## Thuật ngữ
+
+| Thuật ngữ | Giải thích |
+|-----------|-----------|
+| Base unit | Đơn vị gốc (thường 4px hoặc 8px) làm nền tảng cho toàn bộ hệ thống khoảng cách. Mọi giá trị spacing đều là bội số của đơn vị này |
+| Magic numbers | Số tùy tiện không theo quy tắc nào (ví dụ: 13px, 17px). Cần tránh vì gây không nhất quán trong thiết kế |
+| Visual rhythm | Nhịp điệu thị giác — cảm giác hài hòa, đều đặn khi các khoảng cách được sử dụng có hệ thống và lặp lại |
+| Padding | Khoảng đệm bên trong — khoảng cách từ nội dung đến viền của container chứa nó |
+| Proximity principle | Nguyên tắc gần gũi trong Gestalt — các phần tử đặt gần nhau được não bộ coi là có liên quan |
 
 ## Sources
 - [Space in Design Systems](https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62) — Nathan Curtis

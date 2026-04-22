@@ -4,7 +4,7 @@
 
 ## Overview
 
-Journey map là visual representation of user's experience over time. Nó cho thấy touchpoints, emotions, pain points, và opportunities across toàn bộ user flow. Giúp team nhìn thấy big picture thay vì chỉ focus vào individual screens.
+Journey map (bản đồ hành trình) là visual representation of user's experience over time. Nó cho thấy touchpoints (điểm chạm), emotions, pain points (điểm đau/khó chịu), và opportunities across toàn bộ user flow (luồng người dùng). Giúp team nhìn thấy big picture thay vì chỉ focus vào individual screens.
 
 ## Key Points
 
@@ -21,13 +21,13 @@ Journey map là visual representation of user's experience over time. Nó cho th
 ### Types
 - **Current state**: How things are NOW (identify problems)
 - **Future state**: How we WANT things to be (vision)
-- **Service blueprint**: Journey map + backstage processes (for teams)
+- **Service blueprint** (bản vẽ dịch vụ): Journey map + backstage processes (for teams)
 
 ### Tips
 - Base on **real data**, not assumptions
 - Keep it **one page** — wall-sized poster ideal
 - Focus on **emotions** — that's where insights hide
-- Mark **moments of truth** — make-or-break touchpoints
+- Mark **moments of truth** (khoảnh khắc quyết định) — make-or-break touchpoints
 
 ## Examples
 
@@ -38,6 +38,18 @@ Journey map là visual representation of user's experience over time. Nó cho th
 - [[personas-and-jtbd]]
 - [[user-research-methods]]
 - [[usability-testing]]
+
+## Thuật ngữ
+
+| Thuật ngữ | Giải thích |
+|-----------|-----------|
+| Journey map | Bản đồ hành trình — biểu đồ trực quan hóa toàn bộ trải nghiệm của người dùng theo thời gian, từ nhận biết đến trung thành |
+| Touchpoints | Điểm chạm — mỗi lần người dùng tương tác với sản phẩm hoặc thương hiệu (xem quảng cáo, vào website, gọi hỗ trợ) |
+| Pain points | Điểm đau — những khoảnh khắc người dùng cảm thấy khó chịu, bực bội, hoặc gặp trở ngại trong hành trình |
+| User flow | Luồng người dùng — chuỗi các bước mà người dùng đi qua để hoàn thành một nhiệm vụ cụ thể |
+| Emotion curve | Đường cong cảm xúc — biểu đồ thể hiện mức độ hài lòng/bực bội của người dùng tại mỗi giai đoạn trong hành trình |
+| Service blueprint | Bản vẽ dịch vụ — phiên bản mở rộng của journey map, bao gồm cả quy trình hậu trường (nhân viên, hệ thống) phía sau trải nghiệm |
+| Moments of truth | Khoảnh khắc quyết định — những thời điểm then chốt khiến người dùng quyết định tiếp tục hay bỏ đi |
 
 ## Sources
 - [Journey Mapping 101](https://www.nngroup.com/articles/journey-mapping-101/) — NNGroup

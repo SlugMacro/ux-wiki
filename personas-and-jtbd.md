@@ -4,7 +4,7 @@
 
 ## Overview
 
-**Personas** mô tả archetypal users — ai họ là, context, goals. **JTBD** (Jobs-to-be-Done) focus vào what users trying to accomplish regardless of who they are. Best practice: dùng CẢ HAI — personas cho empathy, JTBD cho functionality.
+**Personas** (chân dung người dùng mẫu) mô tả archetypal users — ai họ là, context, goals. **JTBD** (Jobs-to-be-Done — việc cần hoàn thành) focus vào what users trying to accomplish regardless of who they are. Best practice: dùng CẢ HAI — personas cho empathy, JTBD cho functionality.
 
 ## Key Points
 
@@ -12,7 +12,7 @@
 - **Data-driven**, không phải fiction — based on research, interviews, analytics
 - Keep it **lean**: Name, photo, role, key goals, pain points, quote
 - **3-5 personas** max per product
-- Include **behavioral attributes** hơn là demographics
+- Include **behavioral attributes** (đặc điểm hành vi) hơn là demographics (nhân khẩu học)
 - Anti-pattern: "CEO persona" với mọi feature — that's a wish list, not a persona
 
 ### Jobs-to-be-Done Framework
@@ -35,6 +35,18 @@
 - [[user-research-methods]]
 - [[journey-mapping]]
 - [[usability-testing]]
+
+## Thuật ngữ
+
+| Thuật ngữ | Giải thích |
+|-----------|-----------|
+| Personas | Chân dung người dùng mẫu — mô tả giả tưởng nhưng dựa trên dữ liệu thật về nhóm người dùng điển hình, bao gồm mục tiêu, hành vi, khó khăn |
+| Jobs-to-be-Done (JTBD) | Framework tập trung vào "việc" người dùng đang cố hoàn thành, thay vì họ là ai. Giúp phát hiện đối thủ cạnh tranh bất ngờ |
+| Archetypal users | Người dùng nguyên mẫu — đại diện cho một nhóm người dùng có đặc điểm và hành vi tương tự nhau |
+| Behavioral attributes | Đặc điểm hành vi — cách người dùng thực sự hành động (ví dụ: hay so sánh giá, quyết định nhanh) quan trọng hơn nhân khẩu học |
+| Demographics | Nhân khẩu học — thông tin như tuổi, giới tính, thu nhập. Ít hữu ích hơn behavioral attributes trong thiết kế sản phẩm |
+| User stories | Câu chuyện người dùng — mô tả ngắn gọn một tính năng từ góc nhìn người dùng, thường theo format "As a [user], I want to [action], so that [benefit]" |
+| Empathy | Sự đồng cảm — khả năng đặt mình vào vị trí người dùng để hiểu cảm xúc và trải nghiệm thực sự của họ |
 
 ## Sources
 - [Competing Against Luck](https://www.amazon.com/Competing-Against-Luck-Innovation-Customer/dp/0062435612) — Clayton Christensen

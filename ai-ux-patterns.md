@@ -4,9 +4,9 @@
 
 ## Overview
 
-AI UX là lĩnh vực thiết kế đang phát triển nhanh nhất trong UX/UI (2024-2026). Khác với traditional UI nơi user click button và nhận kết quả deterministic, AI products yêu cầu designer xử lý **uncertainty** (kết quả không chắc chắn), **trust** (niềm tin), và **collaboration** (cộng tác human-AI).
+AI UX là lĩnh vực thiết kế đang phát triển nhanh nhất trong UX/UI (2024-2026). Khác với traditional UI nơi user click button và nhận kết quả deterministic, AI products yêu cầu designer xử lý **uncertainty** (kết quả không chắc chắn), **trust** (niềm tin), và **collaboration** (cộng tác human-AI). Khác với deterministic UI (giao diện cho kết quả cố định), AI output có thể thay đổi.
 
-Sự chuyển đổi lớn nhất năm 2025-2026 là từ **Conversational UI** (hỏi AI một câu hỏi) sang **Delegative UI** (giao AI một mục tiêu). User không còn chỉ "chat" với AI — họ **delegate** (ủy quyền) tasks cho AI agents hoạt động tự chủ.
+Sự chuyển đổi lớn nhất năm 2025-2026 là từ **Conversational UI** (giao diện hội thoại) sang **Delegative UI** (giao diện ủy quyền). User không còn chỉ "chat" với AI — họ **delegate** (ủy quyền) tasks cho AI agents (tác nhân AI tự hành) hoạt động tự chủ.
 
 Ba nguồn tài liệu quan trọng nhất cho AI UX: **Google PAIR Guidebook**, **Microsoft HAX Toolkit** (18 Guidelines for Human-AI Interaction), và **Apple HIG Machine Learning**. Mỗi framework tiếp cận vấn đề từ góc độ khác nhau nhưng converge vào cùng core principles.
 
@@ -14,9 +14,9 @@ Ba nguồn tài liệu quan trọng nhất cho AI UX: **Google PAIR Guidebook**,
 
 ## 1. AI Interaction Models — Phổ tương tác Human-AI
 
-### Automation Spectrum
+### Automation Spectrum (phổ tự động hóa)
 
-Có 4 mức độ AI interaction, từ passive đến fully autonomous:
+Có 4 mức độ AI interaction, từ passive đến fully autonomous (tự chủ hoàn toàn):
 
 | Level | Model | Mô tả | Ví dụ thực tế |
 |-------|-------|--------|----------------|
@@ -25,15 +25,15 @@ Có 4 mức độ AI interaction, từ passive đến fully autonomous:
 | **Autopilot** | Supervised autonomy | AI tự thực hiện, user approve/reject | Linear auto-triage, email drafts |
 | **Agent** | Delegated autonomy | AI tự lên kế hoạch + thực thi, user giám sát | Claude Computer Use, Devin, OpenAI Codex |
 
-**Key insight**: Mức độ autonomy càng cao thì yêu cầu về **transparency**, **control**, và **trust design** càng lớn. Không phải lúc nào "more autonomous" cũng tốt hơn — phải match với risk level của task.
+**Key insight**: Mức độ autonomy (tự chủ) càng cao thì yêu cầu về **transparency** (minh bạch), **control**, và **trust design** càng lớn. Không phải lúc nào "more autonomous" cũng tốt hơn — phải match với risk level của task.
 
 ### Ba mô hình kiến trúc UX (Microsoft)
 
 Microsoft chia copilot UX thành 3 framework tích hợp:
 
-1. **Immersive** — Full-screen, toàn bộ canvas dành cho AI. Phù hợp dashboard, data analysis, deep exploration. Ví dụ: ChatGPT canvas mode, Microsoft Copilot for Security.
-2. **Assistive** — Side-panel hoặc sidebar, AI hỗ trợ bên cạnh workflow hiện tại. Ví dụ: GitHub Copilot Chat panel, Notion AI sidebar, Microsoft 365 Copilot.
-3. **Embedded** — Single entry point, inline trong context. Ví dụ: Cursor inline suggestions, Gmail "Help me write", Linear AI auto-complete.
+1. **Immersive** (toàn màn hình) — Full-screen, toàn bộ canvas dành cho AI. Phù hợp dashboard, data analysis, deep exploration. Ví dụ: ChatGPT canvas mode, Microsoft Copilot for Security.
+2. **Assistive** (hỗ trợ bên cạnh) — Side-panel hoặc sidebar, AI hỗ trợ bên cạnh workflow hiện tại. Ví dụ: GitHub Copilot Chat panel, Notion AI sidebar, Microsoft 365 Copilot.
+3. **Embedded** (nhúng trong ngữ cảnh) — Single entry point, inline trong context. Ví dụ: Cursor inline suggestions, Gmail "Help me write", Linear AI auto-complete.
 
 **Best practice**: Kết hợp **Assistive + Embedded** — dùng sidebar cho complex tasks và inline suggestions cho quick actions. Microsoft 365 Copilot thành công với 70% Fortune 500 nhờ mô hình **inline-style interaction** enhance workflow thay vì replace nó.
 
@@ -43,32 +43,32 @@ Microsoft chia copilot UX thành 3 framework tích hợp:
 
 ### Tại sao trust quan trọng
 
-Nghiên cứu (Smashing Magazine, 2025) chỉ ra **Trust Trap** — sự mất cân bằng giữa confidence của user và capability thực sự của AI:
-- **Under-trust**: User không dùng feature hữu ích vì không tin AI
-- **Over-trust**: User phụ thuộc quá mức, không verify output
+Nghiên cứu (Smashing Magazine, 2025) chỉ ra **Trust Trap** (bẫy niềm tin) — sự mất cân bằng giữa confidence của user và capability thực sự của AI:
+- **Under-trust** (tin quá ít): User không dùng feature hữu ích vì không tin AI
+- **Over-trust** (tin quá nhiều): User phụ thuộc quá mức, không verify output
 
 Nghiên cứu học thuật xác nhận: transparency levels cao hơn cải thiện trust (beta = .667), perceived reliability (beta = .595), confidence (beta = .553), và ease of understanding (beta = 1.161) — tất cả đều significant (p < .001).
 
 ### Patterns xây dựng Trust
 
-#### a) Explainability — Giải thích quyết định
+#### a) Explainability (khả năng giải thích) — Giải thích quyết định
 - **"Because you..." pattern**: "Vì bạn thường đọc về UX research, tôi gợi ý bài viết này" (Netflix, Spotify)
-- **Source attribution**: Hiển thị citations và direct quotes từ data sources (Perplexity AI, Microsoft Copilot)
+- **Source attribution** (dẫn nguồn): Hiển thị citations và direct quotes từ data sources (Perplexity AI, Microsoft Copilot)
 - **Decision reasoning**: Show logic đằng sau recommendation, không chỉ kết quả (Google PAIR: "Explain for understanding, not completeness")
 
-#### b) Confidence Indicators — Chỉ báo độ tin cậy
+#### b) Confidence Indicators (chỉ báo độ tin cậy)
 - Hiển thị uncertainty: "70% confident", "I might be wrong"
 - Highlight phần output ít chắc chắn hơn
 - Dùng visual cues (color coding, opacity) cho confidence levels
 - **Ví dụ**: Claude sử dụng language hedging ("I think", "I'm not certain") thay vì assert mọi thứ
 
-#### c) Error Handling — Xử lý lỗi gracefully
+#### c) Error Handling (xử lý lỗi) — Xử lý lỗi gracefully (một cách mượt mà)
 - Acknowledge errors humbly — không pretend AI luôn đúng
 - Provide easy paths to correction
-- Show "AI-generated — please review before sharing" disclaimers
+- Show "AI-generated — please review before sharing" disclaimers (tuyên bố miễn trừ)
 - **Ví dụ**: ChatGPT disclaimer ở mỗi response, Notion AI cho phép undo/redo ngay lập tức
 
-#### d) Appropriate Friction — Ma sát có chủ đích
+#### d) Appropriate Friction (ma sát có chủ đích)
 Microsoft khuyến nghị **thêm friction** (không phải bớt!) tại những điểm quan trọng:
 - Khi user save, share, copy AI-generated content
 - Prompt user review trước khi "own" content
@@ -103,7 +103,7 @@ Microsoft khuyến nghị **thêm friction** (không phải bớt!) tại nhữn
 
 ### Google PAIR Guidebook — 4 trụ cột
 
-#### a) Mental Models — Mô hình nhận thức
+#### a) Mental Models (mô hình nhận thức)
 - Hỏi: "User đang cố làm gì?" và "Mental model nào đã tồn tại?"
 - Set realistic expectations từ đầu
 - **Mô tả user benefits thay vì technology** — nói "tự động tóm tắt email dài" thay vì "sử dụng transformer-based NLP"
@@ -119,21 +119,21 @@ Microsoft khuyến nghị **thêm friction** (không phải bớt!) tại nhữn
 - Luôn cung cấp cách hoàn thành task **không dùng AI** (manual failsafe)
 - Feedback từ user là critical để improve AI
 
-#### d) Errors + Graceful Failure
+#### d) Errors + Graceful Failure (thất bại mượt mà)
 - Phát triển strategies để identify, diagnose, và communicate solutions cho errors
-- AI sẽ sai — thiết kế cho failure, không phải chỉ success path
+- AI sẽ sai — thiết kế cho failure, không phải chỉ success path (đường dẫn thành công)
 
 ### Prompt Design & Input Patterns
 
 **Vấn đề**: Natural language typing chưa phải habit phổ biến. Nhiều user không biết phải type gì.
 
 **Solutions** (Microsoft UX Guidance):
-1. **Suggestion chips**: Hiển thị 3-4 example prompts ngay từ đầu (ChatGPT, Claude)
+1. **Suggestion chips** (thẻ gợi ý): Hiển thị 3-4 example prompts (câu lệnh mẫu) ngay từ đầu (ChatGPT, Claude)
 2. **Structured multi-step inputs**: Thay vì "Ask me anything", chia thành multiple fields (title, details, tone, audience)
 3. **Smart defaults**: Pre-fill dựa trên usage history
 4. **Prompt preview**: Cho user xem prompt trước khi submit
 5. **Tone/style selectors**: Predefined options cho tone, length, format
-6. **Multimodal input**: Voice + text + image upload + file attachment
+6. **Multimodal input** (đầu vào đa phương thức): Voice + text + image upload + file attachment
 
 **Ví dụ thực tế**:
 - **ChatGPT**: 4 suggestion chips ở empty state, support image/file upload
@@ -141,7 +141,7 @@ Microsoft khuyến nghị **thêm friction** (không phải bớt!) tại nhữn
 - **Cursor**: Inline code context tự động, tab completion với preview
 - **Notion AI**: Slash commands ("/summarize", "/translate"), tone selector
 
-### Feedback Loops — Vòng phản hồi
+### Feedback Loops (vòng phản hồi)
 
 **Collaborative UX** (Microsoft) = user guide AI qua continuous feedback loop giữa inputs và outputs:
 - Thumbs up/down (ChatGPT, Claude)
@@ -168,23 +168,23 @@ Microsoft khuyến nghị **thêm friction** (không phải bớt!) tại nhữn
 ### Smashing Magazine Framework — 3 giai đoạn
 
 #### Pre-Action (Consent — Đồng ý trước)
-- **Intent Preview**: Show plan trước khi thực thi, với clear action options (approve/modify/reject)
-- **Autonomy Dial**: Cho user set mức độ independence của agent
+- **Intent Preview** (xem trước ý định): Show plan trước khi thực thi, với clear action options (approve/modify/reject)
+- **Autonomy Dial** (nút chỉnh mức tự chủ): Cho user set mức độ independence của agent
 - **Configuration design**: Prompt user suy nghĩ về desired outcomes, constraints, forbidden actions, risk levels
 
 #### In-Action (Transparency — Minh bạch trong quá trình)
-- **Explainable Rationale**: Justify decisions dựa trên preferences của user
-- **Confidence Signal**: Surface uncertainty để prevent automation bias
+- **Explainable Rationale** (lý do giải thích được): Justify decisions dựa trên preferences của user
+- **Confidence Signal** (tín hiệu độ tin cậy): Surface uncertainty để prevent automation bias (thiên lệch tự động hóa)
 - **Progress signals**: Thay generic loaders bằng meaningful status ("Searching the web...", "Analyzing 3 documents...", "Writing draft...")
 
 #### Post-Action (Safety — An toàn sau khi hoàn thành)
-- **Action Audit & Undo**: Chronological log với easy reversal
-- **Escalation Pathway**: Agent hỏi clarification thay vì guess
+- **Action Audit & Undo** (nhật ký hành động & hoàn tác): Chronological log với easy reversal
+- **Escalation Pathway** (đường dẫn leo thang): Agent hỏi clarification thay vì guess
 
 ### 7 UX Principles cho Agentic AI (UXmatters)
 
 1. **Clarity of Intent**: Enable user communicate direction, limitations, exceptions — không chỉ goals
-2. **Transparency as Affordance**: Explanations trở thành primary interface. Dùng honest human language, tránh information overload
+2. **Transparency as Affordance** (minh bạch như gợi ý sử dụng): Explanations trở thành primary interface. Dùng honest human language, tránh information overload (quá tải thông tin)
 3. **Perceived Control**: User cần intervention capability dù hiếm khi dùng. "Control does not weaken autonomy, it legitimizes it"
 4. **Continuous Feedback**: Transform invisible processing thành visible narrative
 5. **Behavioral Personality Design**: Timing, intervention approach, risk escalation pace — tất cả tạo nên "personality" của agent
@@ -215,7 +215,7 @@ Microsoft khuyến nghị **thêm friction** (không phải bớt!) tại nhữn
 Thay vì traditional chat bubbles back-and-forth, dùng **separate cards/panels** cho complex outputs. Cards hỗ trợ: text, interactive elements, rich media, structured data, code blocks.
 - **Ví dụ**: Claude Artifacts, ChatGPT Canvas, Cursor inline diffs
 
-#### Streaming Responses
+#### Streaming Responses (phản hồi truyền dần)
 - Show text xuất hiện từng token — tạo cảm giác "AI đang suy nghĩ"
 - Component states cần thiết: **loading**, **streaming**, **complete**, **error**, **confidence variants**
 - Figma component system phù hợp cho multiple states này
@@ -227,7 +227,7 @@ Multimodal trở thành default expectation (2026):
 - Kết hợp immediacy of voice với clarity of visual information
 - **Ví dụ**: ChatGPT voice mode + vision, Claude file analysis, Gemini multimodal
 
-#### Progressive Disclosure
+#### Progressive Disclosure (tiết lộ dần dần)
 - Reveal information step-by-step thay vì overwhelm
 - Collapsible sections cho detailed explanations
 - "Show more" cho sources/citations
@@ -235,8 +235,8 @@ Multimodal trở thành default expectation (2026):
 
 ### Anti-patterns cần tránh
 
-#### Over-Humanization
-Microsoft cảnh báo **không** dùng ngôn ngữ anthropomorphic:
+#### Over-Humanization (nhân hóa quá mức)
+Microsoft cảnh báo **không** dùng ngôn ngữ anthropomorphic (nhân hóa):
 - Tránh: "I understand", "I think", "I feel"
 - Dùng: "Processing", "Analyzing", "Based on the data"
 - First-person singular (I, me) OK vì conversational
@@ -260,7 +260,7 @@ Không bao giờ để AI sound 100% confident khi không phải. Luôn include:
 
 ### Empty State Design cho AI
 
-Empty state là **critical moment** cho AI products — user mới không biết AI có thể làm gì.
+Empty state (trạng thái trống) là **critical moment** cho AI products — user mới không biết AI có thể làm gì.
 
 **Best practices**:
 1. **4 diverse example prompts**: Showcase variety of actions AI có thể thực hiện. Ví dụ ChatGPT hiển thị 4 chips covering different use cases
@@ -276,7 +276,7 @@ Empty state là **critical moment** cho AI products — user mới không biết
 - **Inline suggestions**: "Try adding more context about..." khi prompt quá vague
 - **Capability boundaries**: Nói rõ AI KHÔNG THỂ làm gì, không chỉ có thể làm gì
 
-### Calibration (Apple HIG)
+### Calibration (hiệu chỉnh ban đầu) (Apple HIG)
 
 Apple khuyến nghị:
 - Dùng **calibration** chỉ khi feature không thể hoạt động thiếu initial information
@@ -288,7 +288,7 @@ Apple khuyến nghị:
 
 ## 7. Emerging Concepts (2026)
 
-### Machine Experience (MX) Design
+### Machine Experience (MX) Design (thiết kế trải nghiệm cho máy)
 Thiết kế không chỉ cho humans mà còn cho **AI agents as users**:
 - APIs, data structures, documentation optimized cho AI consumption
 - NNGroup đã bắt đầu viết về "AI Agents as Users" — AI cần navigate systems, consume content, take actions
@@ -300,7 +300,7 @@ Shift từ "asking AI a question" sang "assigning AI a goal":
 - UI cần support goal-setting, constraint-defining, và progress-monitoring
 - **Ví dụ**: Claude Projects (set context + goals), Cursor background agents, Devin autonomous coding
 
-### Multi-Agent Orchestration
+### Multi-Agent Orchestration (điều phối đa tác nhân)
 Khi nhiều AI agents cộng tác:
 - Task distribution visibility
 - Agent conflict resolution
@@ -327,11 +327,11 @@ Khi nhiều AI agents cộng tác:
 ### GitHub Copilot
 - **Model**: Embedded (inline suggestions) + Assistive (chat panel)
 - **Trust**: Tab to accept, easy dismiss, diff preview
-- **Pattern**: Ghost text suggestions — không intrusive, user opt-in mỗi suggestion
+- **Pattern**: Ghost text (chữ mờ gợi ý) suggestions — không intrusive (xâm phạm), user opt-in mỗi suggestion
 
 ### Cursor
 - **Model**: Embedded + Immersive
-- **Innovation**: Inline diffs, multi-file edits, background agents, tab completion với context awareness
+- **Innovation**: Inline diffs (so sánh thay đổi ngay tại chỗ), multi-file edits, background agents, tab completion với context awareness
 - **Trust**: Clear diff view showing exactly what changes, easy accept/reject per change
 
 ### Notion AI
@@ -356,6 +356,31 @@ Khi nhiều AI agents cộng tác:
 - [[navigation-patterns]] — Conversation history, agent task navigation
 
 ---
+
+## Thuật ngữ
+
+| Thuật ngữ | Giải thích |
+|-----------|-----------|
+| Deterministic UI | Giao diện cho kết quả cố định — cùng input luôn cho cùng output. Khác với AI nơi kết quả có thể thay đổi |
+| Automation Spectrum | Phổ tự động hóa — 4 mức độ từ Assist (gợi ý) đến Agent (tự chủ hoàn toàn), mỗi mức yêu cầu thiết kế trust khác nhau |
+| Copilot | Mô hình AI làm cùng người dùng như đối tác, người dùng vẫn kiểm soát và ra quyết định chính |
+| Agentic AI | AI tự chủ — AI có khả năng tự lên kế hoạch và thực thi nhiệm vụ, người dùng giám sát thay vì điều khiển trực tiếp |
+| Delegative UI | Giao diện ủy quyền — người dùng giao mục tiêu cho AI thay vì chỉ dẫn từng bước. Xu hướng chính 2025-2026 |
+| Trust Trap | Bẫy niềm tin — sự mất cân bằng giữa mức tin tưởng của người dùng và khả năng thực sự của AI (tin quá nhiều hoặc quá ít) |
+| Explainability | Khả năng giải thích — AI cho người dùng biết tại sao đưa ra quyết định/gợi ý đó, không chỉ hiện kết quả |
+| Confidence indicators | Chỉ báo độ tin cậy — tín hiệu trực quan cho người dùng biết AI chắc chắn đến đâu về câu trả lời |
+| Source attribution | Dẫn nguồn — hiển thị trích dẫn và link nguồn gốc của thông tin AI cung cấp, giúp người dùng xác minh |
+| Suggestion chips | Thẻ gợi ý — các nút nhỏ hiển thị câu prompt mẫu, giúp người dùng mới biết phải bắt đầu từ đâu |
+| Streaming responses | Phản hồi truyền dần — text xuất hiện từng phần thay vì đợi hoàn thành rồi hiện một lúc, tạo cảm giác AI đang suy nghĩ |
+| Ghost text | Chữ mờ gợi ý — text nhạt hiện trước cho người dùng xem trước gợi ý của AI, nhấn Tab để chấp nhận |
+| Multimodal | Đa phương thức — hỗ trợ nhiều loại input/output cùng lúc: text, giọng nói, hình ảnh, file, code |
+| Hallucination | Hiện tượng AI tạo ra thông tin sai nhưng trình bày rất tự tin như thật. Cần disclaimers và source citation để giảm thiểu |
+| Calibration | Hiệu chỉnh ban đầu — quá trình thu thập thông tin từ người dùng lần đầu để AI cá nhân hóa trải nghiệm |
+| Mental model | Mô hình nhận thức — cách người dùng hình dung hệ thống hoạt động trong đầu. AI cần set đúng kỳ vọng từ đầu |
+| Machine Experience (MX) | Thiết kế trải nghiệm cho máy — discipline mới thiết kế API và data structures tối ưu cho AI agents sử dụng |
+| Orchestration | Điều phối đa tác nhân — quản lý nhiều AI agents cùng phối hợp thực hiện một nhiệm vụ phức tạp |
+| Dark patterns | Thủ thuật thiết kế lừa người dùng làm điều họ không muốn. Trong AI context: che giấu uncertainty hoặc over-humanize |
+| Anthropomorphic | Nhân hóa — gán đặc tính con người cho AI (nói "tôi cảm thấy", "tôi hiểu"). Microsoft khuyến cáo nên tránh |
 
 ## Sources
 

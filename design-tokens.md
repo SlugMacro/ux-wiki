@@ -4,20 +4,20 @@
 
 ## Overview
 
-Design tokens là các named values đại diện cho design decisions: `color-primary-500`, `spacing-md`, `font-size-body`. Thay vì hardcode `#3B82F6` khắp nơi, bạn dùng token `color-primary-500` — đổi 1 chỗ, update everywhere. Tokens là ngôn ngữ chung giữa designer (Figma variables) và developer (CSS variables/theme).
+Design tokens (biến thiết kế) là các named values đại diện cho design decisions: `color-primary-500`, `spacing-md`, `font-size-body`. Thay vì hardcode (ghi cứng giá trị) `#3B82F6` khắp nơi, bạn dùng token `color-primary-500` — đổi 1 chỗ, update everywhere. Tokens là ngôn ngữ chung giữa designer (Figma variables) và developer (CSS variables/theme).
 
 ## Key Points
 
-### Token Hierarchy (3 levels)
+### Token Hierarchy (phân cấp biến) (3 levels)
 ```
-Global tokens    →  blue-500: #3B82F6
-                     gray-100: #F3F4F6
+Global tokens (biến toàn cục)    →  blue-500: #3B82F6
+                                     gray-100: #F3F4F6
 
-Alias tokens     →  color-primary: {blue-500}
-                     color-bg-subtle: {gray-100}
+Alias tokens (biến bí danh)     →  color-primary: {blue-500}
+                                     color-bg-subtle: {gray-100}
 
-Component tokens →  button-bg: {color-primary}
-                     card-bg: {color-bg-subtle}
+Component tokens (biến thành phần) →  button-bg: {color-primary}
+                                       card-bg: {color-bg-subtle}
 ```
 
 ### Naming Convention
@@ -39,7 +39,7 @@ font-size-body            # Font size body
 - **Typography**: font-family, font-size, font-weight, line-height
 - **Border**: radius, width
 - **Shadow**: elevation levels
-- **Motion**: duration, easing
+- **Motion** (chuyển động): duration, easing (đường cong tốc độ)
 
 ### Implementation
 ```css
@@ -56,7 +56,7 @@ theme: {
 }
 ```
 
-### Theming with Tokens
+### Theming (tùy chỉnh giao diện) with Tokens
 - Light/Dark mode = swap alias tokens, keep component tokens unchanged
 - Brand theming = swap global tokens, aliases auto-update
 - Figma Variables map 1:1 with CSS Custom Properties
@@ -68,11 +68,25 @@ theme: {
 - **Shopify Polaris tokens**: Public token system with clear naming
 
 ## Related
+- [[design-systems]]
 - [[color-theory]]
 - [[typography]]
 - [[spacing-system]]
 - [[atomic-design]]
 - [[figma-workflow]]
+
+## Thuật ngữ
+
+| Thuật ngữ | Giải thích |
+|-----------|-----------|
+| Design tokens | Biến thiết kế — các giá trị được đặt tên (màu, khoảng cách, font) dùng chung giữa Figma và code. Đổi một chỗ, cập nhật khắp nơi |
+| Hardcode | Ghi cứng giá trị trực tiếp (ví dụ: #3B82F6) thay vì dùng biến. Khó bảo trì vì phải sửa từng chỗ |
+| Global tokens | Biến toàn cục — lớp token thấp nhất, chứa giá trị gốc như blue-500, gray-100. Không mang ngữ nghĩa sử dụng |
+| Alias tokens | Biến bí danh — lớp token giữa, gán ý nghĩa cho global tokens (ví dụ: color-primary trỏ đến blue-500) |
+| Component tokens | Biến thành phần — lớp token cao nhất, gắn với component cụ thể (ví dụ: button-bg trỏ đến color-primary) |
+| Theming | Tùy chỉnh giao diện — khả năng thay đổi diện mạo toàn bộ ứng dụng bằng cách hoán đổi bộ token (Light/Dark, brand A/B) |
+| CSS Custom Properties | Biến CSS gốc (dạng --ten-bien) cho phép lưu trữ và tái sử dụng giá trị trong stylesheet. Là cách phổ biến nhất để implement tokens trong code |
+| Easing | Đường cong tốc độ — kiểm soát tốc độ animation thay đổi theo thời gian (nhanh đầu chậm cuối, hoặc ngược lại) |
 
 ## Sources
 - [Design Tokens W3C Draft](https://www.w3.org/community/design-tokens/) — W3C

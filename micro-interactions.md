@@ -4,7 +4,7 @@
 
 ## Overview
 
-Micro-interactions là các animation/feedback nhỏ xảy ra khi user tương tác với UI: button hover, toggle switch, loading state, pull-to-refresh. Chúng làm interface feel "alive" và communicative. Rule: **functional first, delightful second**.
+Micro-interactions (tương tác vi mô) là các animation/feedback nhỏ xảy ra khi user tương tác với UI: button hover, toggle switch, loading state, pull-to-refresh (kéo để làm mới). Chúng làm interface feel "alive" và communicative. Rule: **functional first, delightful second**.
 
 ## Key Points
 
@@ -16,8 +16,8 @@ Micro-interactions là các animation/feedback nhỏ xảy ra khi user tương t
 
 ### Animation Principles cho UI
 - **Duration**: 150-300ms cho most transitions. <100ms feels instant, >500ms feels slow
-- **Easing**: ease-out cho entrances, ease-in cho exits, ease-in-out cho moves
-- **Stagger**: Danh sách items animate lần lượt (20-50ms delay between items)
+- **Easing** (đường cong tốc độ): ease-out cho entrances, ease-in cho exits, ease-in-out cho moves
+- **Stagger** (hiệu ứng lần lượt): Danh sách items animate lần lượt (20-50ms delay between items)
 - **Transform only**: Animate `transform` và `opacity` — browser tối ưu nhất
 
 ### Common Micro-interactions
@@ -35,7 +35,7 @@ Micro-interactions là các animation/feedback nhỏ xảy ra khi user tương t
 ### When NOT to animate
 - User đang typing hoặc editing (distracting)
 - Repeated actions (toast mỗi lần save = annoying)
-- Khi user đã tắt `prefers-reduced-motion`
+- Khi user đã tắt `prefers-reduced-motion` (cài đặt giảm chuyển động)
 - Performance-sensitive contexts (low-end devices)
 
 ### prefers-reduced-motion
@@ -57,6 +57,20 @@ Always respect this media query — some users have vestibular disorders.
 - [[design-principles]]
 - [[accessibility-basics]]
 - [[ai-ux-patterns]] — Streaming animations, AI loading states, confidence visual cues, agent progress indicators
+
+## Thuật ngữ
+
+| Thuật ngữ | Giải thích |
+|-----------|-----------|
+| Micro-interactions | Tương tác vi mô — animation/feedback nhỏ xảy ra khi người dùng tương tác (nhấn nút, bật toggle, kéo làm mới). Làm giao diện sống động |
+| Trigger | Yếu tố khởi tạo micro-interaction — có thể do người dùng (click, hover) hoặc hệ thống (nhận thông báo) |
+| Easing | Đường cong tốc độ animation — kiểm soát tốc độ thay đổi theo thời gian. ease-out nhanh đầu chậm cuối, ease-in ngược lại |
+| Stagger | Hiệu ứng lần lượt — các item trong danh sách animate từng cái một với delay nhỏ (20-50ms), tạo cảm giác mượt mà |
+| Transform | Thuộc tính CSS dùng thay đổi vị trí, kích thước, xoay phần tử. Cùng với opacity, là hai thuộc tính animate mượt nhất |
+| prefers-reduced-motion | Cài đặt hệ điều hành cho phép người dùng yêu cầu giảm animation. Designer phải tôn trọng tùy chọn này |
+| Pull-to-refresh | Kéo để làm mới — cử chỉ kéo xuống ở đầu trang trên mobile để tải lại nội dung mới |
+| Perceived performance | Hiệu suất cảm nhận — cảm giác nhanh hay chậm của người dùng, có thể cải thiện bằng animation dù tốc độ thật không đổi |
+| Feedback loop | Vòng phản hồi — chu trình người dùng hành động, nhận phản hồi, rồi hành động tiếp. Animation giúp vòng này rõ ràng hơn |
 
 ## Sources
 - [Microinteractions](https://microinteractions.com/) — Dan Saffer

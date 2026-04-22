@@ -10,7 +10,7 @@ Có 2 loại principles: **universal principles** (áp dụng mọi nơi) và **
 
 ## Key Points
 
-### 10 Heuristics của Nielsen Norman
+### 10 Heuristics (nguyên tắc đánh giá nhanh) của Nielsen Norman
 1. **Visibility of system status** — Luôn cho user biết đang xảy ra gì
 2. **Match between system and real world** — Dùng ngôn ngữ user hiểu, không phải jargon hệ thống
 3. **User control and freedom** — Luôn có "emergency exit" (undo, back, cancel)
@@ -24,9 +24,9 @@ Có 2 loại principles: **universal principles** (áp dụng mọi nơi) và **
 
 ### Principles bổ sung
 - **Hierarchy** — Mắt user đọc theo pattern (F-pattern, Z-pattern). Design phải guide visual flow
-- **Affordance** — Object phải "trông giống" cách nó hoạt động (button trông bấm được)
-- **Feedback** — Mọi action đều cần response. Silence is confusing
-- **Progressive disclosure** — Chỉ show thông tin cần thiết, hide complexity cho đến khi cần
+- **Affordance** (khả năng gợi ý cách sử dụng) — Object phải "trông giống" cách nó hoạt động (button trông bấm được)
+- **Feedback** (phản hồi) — Mọi action đều cần response. Silence is confusing
+- **Progressive disclosure** (tiết lộ dần dần) — Chỉ show thông tin cần thiết, hide complexity cho đến khi cần
 
 ## Examples
 
@@ -41,6 +41,19 @@ Có 2 loại principles: **universal principles** (áp dụng mọi nơi) và **
 - [[common-ui-patterns]]
 - [[accessibility-basics]]
 - [[ai-ux-patterns]] — Nielsen's Heuristics trong context AI: visibility of system status cho streaming, error recovery cho hallucinations
+
+## Thuật ngữ
+
+| Thuật ngữ | Giải thích |
+|-----------|-----------|
+| Heuristics | Bộ nguyên tắc đánh giá nhanh dùng để kiểm tra chất lượng thiết kế mà không cần test với người dùng thật |
+| Affordance | Đặc tính thiết kế giúp người dùng hiểu ngay cách sử dụng. Ví dụ: nút bấm trông lồi lên khiến người ta muốn nhấn vào |
+| Progressive disclosure | Kỹ thuật chỉ hiện thông tin cần thiết trước, giấu phần phức tạp cho đến khi người dùng cần. Giúp giao diện đỡ rối |
+| Feedback | Phản hồi — mọi hành động của người dùng đều cần response từ hệ thống. Im lặng = người dùng bối rối |
+| Visibility of system status | Nguyên tắc luôn cho người dùng biết hệ thống đang ở trạng thái nào (đang tải, đã lưu, có lỗi) |
+| F-pattern / Z-pattern | Mẫu đọc tự nhiên của mắt người trên trang web. F-pattern cho trang nhiều text, Z-pattern cho trang ít nội dung |
+| Error prevention | Thiết kế ngăn lỗi xảy ra từ đầu thay vì chỉ thông báo lỗi sau khi người dùng mắc sai lầm |
+| Recognition over recall | Nguyên tắc hiển thị lựa chọn sẵn thay vì bắt người dùng phải nhớ. Dropdown tốt hơn text field trống |
 
 ## Sources
 - [10 Usability Heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/) — Nielsen Norman Group
